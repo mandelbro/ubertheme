@@ -1,5 +1,5 @@
-name = Ursa Minor
-description = A stellar theme for Polaris Payroll Consulting
+name = UberTheme
+description = An über powered HTML5 Boilerplate based theme for Drupal
 package = Core
 version = VERSION
 core = 7.x
