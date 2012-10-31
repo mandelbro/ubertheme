@@ -34,25 +34,37 @@
  */
 ?>
 
-<!doctype html>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+	<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
+<!--[if IE 7]>
+	<html class="no-js lt-ie9 lt-ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
+<!--[if IE 8]>
+	<html class="no-js lt-ie9" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
+<!--[if gt IE 8]>
+<!-->
+	<html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<?php print $head; ?>
-	
-	<title><?php print $head_title; ?></title>
-	
-	<?php print $styles; ?>
+		<?php print $head; ?>
+		<meta name="viewport" content="width=device-width">
 
-</head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+		<title><?php print $head_title; ?></title>
 
-	<?php print $page_top; ?>
-	<?php print $page; ?>
-	<?php print $page_bottom; ?>
+		<?php print $styles; ?>
 
-	<?php print $scripts; ?>
-</body>
+	</head>
+	<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+		<!--[if lt IE 7]>
+				<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+		<![endif]-->
+
+		<?php print $page_top; ?>
+		<?php print $page; ?>
+		<?php print $page_bottom; ?>
+
+		<?php print $scripts; ?>
+	</body>
 </html>

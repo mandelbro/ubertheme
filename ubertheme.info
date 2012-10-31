@@ -4,14 +4,17 @@ package = Core
 version = VERSION
 core = 7.x
 
-; add core stylesheets
-stylesheets[screen][] = css/reset.css
-stylesheets[screen][] = css/style.css
+; add boilerplate stylesheets
+stylesheets[screen][] = css/normalize.css
+stylesheets[screen][] = css/main.css
+; add drupal stylesheets
 stylesheets[print][] = css/print.css
+stylesheets[screen][] = css/style.css
 
-; add core javascript
+; add boilerplate javascript
 scripts[] = js/modernizr.js
-settings[shortcut_module_link] = 1
+scripts[] = js/main.js
+scripts[] = js/plugins.js
 
 ; define regions
 regions[content] = Content
@@ -23,6 +26,8 @@ regions[header_menu] = Header navigation menu
 regions[footer] = Footer
 regions[sidebar_first] = Left sidebar
 regions[sidebar_second] = Right sidebar
+
+settings[shortcut_module_link] = 1
 
 ; define configurable features
 features[] = logo
