@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Default theme implementation to display a single Drupal page.
+ * This is the homepage template, users will only see this is they are on the front page and not logged in.
  *
  * Available variables:
  *
@@ -73,7 +73,7 @@
 	
 		<div id="header-menu">
 			<div id="logo">
-				<a id="logo-link" href="">
+				<a id="logo-link" href=""></a>
 			</div>
 			<nav id="navigation">
 				<?php print render($main_menu); ?>
@@ -93,6 +93,7 @@
 	</header><!-- /#header -->
 	
 	<div id="main" class="container" role="main">
+		
 		<!-- Messages -->
 		<?php if(!empty($messages)) : ?>
 			<div id="console">

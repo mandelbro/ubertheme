@@ -73,7 +73,7 @@
 	
 		<div id="header-menu">
 			<div id="logo">
-				<a id="logo-link" href="">
+				<a id="logo-link" href=""></a>
 			</div>
 			<nav id="navigation">
 				<?php print render($main_menu); ?>
