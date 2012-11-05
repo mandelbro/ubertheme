@@ -41,6 +41,22 @@ function ubertheme_preprocess_page(&$vars) {
 }
 
 /**
+ * Override or insert variables into the node template. Also creates optional
+ * templates for each nodetype
+ */
+function ubertheme_preprocess_node(&$variables) {
+	$node = $variables['node'];
+
+	// define a template suggestion for the node type
+	$variables['theme_hook_suggestions'][] = 'node__type__'. $node->type;
+
+	if($variables['view_mode'] == 'full') {
+		// define a template suggestion for the node type
+		$variables['theme_hook_suggestions'][] = 'node__type__'. $node->type .'__full';
+	}
+}
+
+/**
  * Display the list of available node types for node creation.
  */
 function ubertheme_node_add_list($variables) {
